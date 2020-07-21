@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+    background-image:none;  
+}
+h1{
+    color:white;
+    text-align: center;
+}
+#category-item{
+ background-color:beige;
+ max-height:9rem;
+ margin-top:0;
+ margin-bottom:0;
+ min-height: 8rem;
+ width:100%;
+}
+
+img{
+    max-height:9rem;
+    min-height:9rem;
+}
+
+#product-item{
+    background-color: white;
+    max-height:9rem;
+    margin-top:0;
+    margin-bottom:0;
+    min-height:8rem;
+}
+
+#seperator{
+    margin:0;
+    background-color: antiquewhite;
+    border-bottom:0.01px;
+
+}
+
+#header{
+    margin-top:10px;
+}
+
+#extra{
+    margin-top:10px;
+}
+
+#table-num{
+    background-color: rgb(11, 155, 11);
+    margin: 0;
+    position: sticky;
+    top:0;
+    
+}
+

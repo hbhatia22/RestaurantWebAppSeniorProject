@@ -1,0 +1,23 @@
+body {
+    background-image:none;
+    background-color: grey;
+
+}
+
+#heading{
+    background: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.ready{
+    background-color: rgb(97, 215, 97);
+}
+
+#ready{
+    color:white; 
+}
+

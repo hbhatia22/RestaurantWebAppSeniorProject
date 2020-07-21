@@ -1,0 +1,41 @@
+body{
+    background-image: none;
+    background-color:rgb(225, 227, 201)
+}
+
+.container{
+    width: 40rem;
+
+}
+
+#submit{
+    width: 100;
+   
+}
+
+#total{
+    text-align: center;
+    border:2px solid rgb(92, 208, 81);
+    border-radius: 25px;
+    background-color: rgb(92, 208, 81);
+}
+
+#checkout{
+    text-align: center;
+    font-size: 3rem;
+}
+
+#table-num{
+    text-align: center;
+    border:2px solid rgb(92, 208, 81);
+    border-radius: 25px;
+  
+    
+
+}
+
+button{
+    text-align: center;
+    width:100%;
+    
+}

@@ -1,0 +1,45 @@
+body{
+    background-image: none;
+    background-color:rgb(247, 255, 217);
+}
+
+iframe{
+    top: 0px;
+    width:140%;
+    height :315%;
+}
+#stripeXDM_default762316_provider{
+    position: relative;
+    top:0px;
+}
+i{
+    font-size:4rem;
+}
+
+h2{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+h6{
+    text-align: center;
+}
+
+#add-button{
+    width: 100%;
+}
+
+#wrapper{
+   margin-left:0.1rem;
+   margin-right:1rem;
+}
+
+#seperator{
+    
+    background-color: grey;
+    border-bottom:1%;
+
+}

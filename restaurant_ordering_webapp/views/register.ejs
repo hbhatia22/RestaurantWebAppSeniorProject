@@ -1,0 +1,39 @@
+
+
+<%- include("partials/header.ejs") %>
+
+
+<div style="background-color:black;" class="container">
+    <h1 style="padding-top:2em;margin-top:2em;text-align:center; color:white;">Sign Up</h1>
+    <% if (messages!=null){ %>
+        <div class="ui red message">The username you have chosen already exists, Please select a different username</div>
+
+
+    <%}%>
+    <div style="width:30%; margin:0 auto;">
+   
+    <form action="/register" method="POST">
+       
+                <input class="mb-3 form-control" type="text" name="username" placeholder="Login Name" required="yes">
+
+                <input class="mb-3 form-control" type="text" name="firstname" placeholder="First">
+                <input class="mb-3 form-control" type="text" name="lastname" placeholder="Last">
+                <input class="mb-3 form-control" type="email" name="email" placeholder="E-mail" required="yes">
+
+        
+                <input class="mb-3 form-control" type="password" name="password" placeholder="Password" required="yes">
+                <input type="hidden" name="_csrf" value= <%=csrfToken %>>
+ 
+        <button class="mb-3 btn-danger btn-block btn-lg">Submit!</button>
+  
+    </form>
+
+    <a href="/">Go Back</a>
+    </div>
+</div>
+
+ <%=csrfToken %> 
+
+
+<%- include("partials/footer.ejs") %>
+

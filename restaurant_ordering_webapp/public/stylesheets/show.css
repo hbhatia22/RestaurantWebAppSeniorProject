@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+}
+
+#table-num{
+    display: inline;
+    display: i
+}
+
+body{
+    background: none;
+}
+
+
+table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+#price{
+    text-align:center;
+}
+
+#qty{
+    text-align:center;
+}
+
+#buttons{
+    text-align: center;
+    margin-top:2rem;
+}
+
+#payment{
+    border: 3px solid black;
+    margin-top: 2rem;
+    padding: 1rem;
+}

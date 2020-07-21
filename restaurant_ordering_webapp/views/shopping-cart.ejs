@@ -1,0 +1,96 @@
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/shopping-cart.css">
+<section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Your Shopping Cart</h1>
+         </div>
+    </section>
+   
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col"> </th>
+                                <th scope="col">Product</th>
+                                <th scope="col">Available</th>
+                                <th scope="col" class="text-center">Customer Comments</th>
+                                <th scope="col" class="text-right">Price</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                               
+                            
+                            <% products.forEach(function(product){  %>
+                                <form action="/comments" method="POST">
+                            <tr>
+                                <td><img src=<%= product.item.productImage %> > </td>
+                                <td><%= product.item.name%></td>
+                                <td>in stock</td>
+                                <td><input name="comment" class="form-control" type="text" value=""> </td>
+                                <td class="text-right"><%=product.item.productPrice %></td>
+                                <td class="text-right"><button class="btn btn-sm btn-danger"><i id="icon" class="trash icon"></i> </button> </td>
+                            </tr>
+                            <%})%>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Sub-Total</td>
+                                <td class="text-right">$ <%=totalPrice.toFixed(2) %> </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Tax 7%</td>
+                                <td class="text-right">$ <%=(totalPrice * 0.07).toFixed(2) %></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><strong>Total</strong></td>
+                                <td class="text-right"><strong><%=(totalPrice* 1.07).toFixed(2) %></strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col mb-2">
+                <div class="row">
+                    <div class= "fluid container">
+                        <div style="width:100%" class="ui buttons">
+                                <i onclick="window.location.href='/menu'" style="font-size: 2rem" class="ui button">Continue shopping</i>
+                                <div style="font-size: 2rem" class="or"></div>
+                            
+                                <button style="font-size: 2rem" class="ui positive button">Proceed to checkout</button>
+                            </form>
+                              </div>
+                    </div>
+                
+                    <!-- <div class="col-sm-12  col-md-6">
+                        <button style="font-size: 2.5rem;" class="btn btn-block btn-light">Continue Shopping</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-right">
+                         <button style="font-size: 2.5rem;" class="btn btn-lg btn-block btn-success text-uppercase">Continue to Checkout<i style="float: right;margin-bottom:2rem; font-size:2.5rem" class="arrow alternate circle right icon"></i></button> -->
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <h1>No Items in Shopping Cart</h1>
+    </div>
+ -->
+
+
+
+    <%- include("partials/footer.ejs") %>

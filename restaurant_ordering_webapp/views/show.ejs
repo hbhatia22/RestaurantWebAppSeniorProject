@@ -1,0 +1,63 @@
+<%- include("partials/header.ejs") %>
+<% var usaTime = order.time.toLocaleString("en-US", {timeZone: "America/New_York"});%>
+<% usaTime = new Date(usaTime); %>
+<div class="container">
+<h1>Order Details</h1>
+<link rel="stylesheet" href="/stylesheets/show.css">
+<h2>Customer e-mail: <strong><%=order.customer.email %></strong></h2>
+
+<h2>Order Time: <%=usaTime.toLocaleString() %></h2>
+<h2>Order Type: 
+<% if (order.table){  %>
+
+    <strong>This is an order for table <%=order.table%></strong>
+  <% } else {%>
+    <strong>Pick-Up Order</strong>
+    <% } %>
+
+</h2> 
+
+<h2>Order:</h2>
+<table>
+    <tr>
+      <th id="qty">Qty</th>
+      <th>Item</th>
+      <th>Customer Comments</th>
+      <th id="qty">Price</th>
+    </tr>
+    <%var i=0;%>
+    <% order.items.forEach(function(item){ %>
+     
+        
+       
+        <tr>
+            <th id="qty"><%= item.qty%></th>
+            <th><%=item.item.name%> </th>
+            <th><%=order.comments[i] %></th>
+            <%i++ %>
+            <th id="price"><%=item.price %></th>
+        </tr>
+       
+        <% });%> 
+       
+    <tr>
+      
+    
+  </table>
+  <div id="payment">
+      <%if (order.cardNumber) {%>
+        <h2>This Order is paid with a credit card</h2>
+        <% } else {%>
+            <h2>Please Collect Cash Payment for this order</h2>
+
+            <%} %>
+
+  </div>
+
+<div id="buttons" class="container">
+  <button style="width:50%" onclick="window.location.href='/kitchen'" class="ui button red">Back</button>
+
+</div>
+
+
+</div>

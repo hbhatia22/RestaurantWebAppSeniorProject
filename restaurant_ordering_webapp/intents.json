@@ -1,0 +1,69 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "Hey", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hi! I'm CoronaBot", "Hi! I'm CoronaBot. I was created by the WWTG group", "Hi! I'm CoronaBot. I will be your host today"],
+         "context_set": ""
+        },
+        {"tag": "Professor",
+                "patterns": ["who is the best professor in kean", "Who is the smartest one here"],
+                "responses": ["Our professor Dr. Mira Franke", "Of Course Prof Franke"]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "hours",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?", "hours"],
+         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "payments",
+         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?", "Credit cards", "cards" ],
+         "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
+        },
+        {"tag": "opentoday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?", "hours", "hours today", "weekend hours"],
+         "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+        },
+        {"tag": "menu",
+                "patterns": ["what is on menu today?", "favorite dish", "What do you recommend here?", "what should I order"],
+                "responses": ["Our pizza is known to be the best in the city. You can check it out: http://localhost:3000/menu", 
+                        "My favorite is the cheesestake. You can check it out: http://localhost:3000/menu", 
+                        "Our chef is an expert in making peperoni pizza. You can check it out: http://localhost:3000/menu"]
+        },
+        {"tag": "salad",
+                "patterns": ["How much is salad", "salads", "how are the salads"],
+                "responses": ["All our salads are $6.99", "We have ceasar, garden and mediterranean salads. All our salads are $6.99", 
+                        "Ah salads! Amazing salads for just $6.99."]
+        },
+        {"tag": "pizza",
+                "patterns": ["How much are pizza pie", "pizza", "how are the pizza"],
+                "responses": ["Our pizzas start at $8.99. Add toppings for $0.50 each", "You said PIZZA! We are famous for our pizzas. All our pizzas start at $8.99", 
+                        "Ah pizzas! My favorite starting at just $8.99."]
+        },
+        {"tag": "table",
+                "patterns": ["what is my table number", "table number"],
+                "responses": ["Your table number should be listed on the side of the table"]
+        },
+        {"tag": "chef",
+                "patterns": ["who is your chef", "chef", "cook","what is your chef's name"],
+                "responses": ["The team of WWTG are the chef", "WWTG! The best chefs in town!",
+                         "WWTG! the team that made me also makes the best pizza"]
+        },
+        {"tag": "order",
+                "patterns": ["do you take pickup orders", "pickup"],
+                "responses": ["We offer order pickups", "You can order for pickup. Our team will prepare your order fresh and fast."]
+        },
+        {"tag": "host",
+                "patterns": ["Can you send someone", "host", "I need help", "call my host", "I need my host"],
+                "responses": ["So sorry I couldn't help! Yahya will on his way", 
+                        "This is embarrassing. I will call Harsh for you",
+                        "I couldn't help. That's not normal. Anyway I will send Aishwik. I will come back better next time.",
+                        "Hani will out shortly. I tried my best. I will try harder to help you next time."]
+        }
+        
+   ]
+}

@@ -1,0 +1,51 @@
+i.icon {
+    font-size: 1.5em;
+}
+
+.container.main {
+    margin-top: 1.0em;
+}
+
+#post_buttons{
+    margin: 0;
+}
+
+
+
+#delete{
+    display: inline;
+}
+
+#buttons{
+    margin-left: 3%;
+    margin-right: 3%;
+   
+}
+
+body{
+    background-image: url("https://www.goodfreephotos.com/albums/thailand/bangkok/restaurant-in-bangkok-thailand.jpg");
+    background-size: cover
+}
+
+#login{
+    background-color:black; 
+    width:60%; 
+    height:60%;
+    border: 2px;
+    background-blend-mode: color-dodge;
+    opacity: 0.9;
+    
+}
+
+#logbtns{
+  float:right;
+    
+}
+
+.navbar{
+    font-size: 1.5rem;
+}
+
+.badge{
+    background-color: black;
+}

@@ -1,0 +1,82 @@
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+<div class="row">
+    <div class="col-sm-6 com-md-4 col-md-offset-4 col-sm-offset-3">
+       
+        <div id="cartErr" class="alert alert-success <% if (message[0]==null) {%> invisible <% }else{ %> visible <%} %>">
+            <%=(message);%>
+           
+
+        </div>
+        <div id="order-success" class="success  <% if (message[1]==null) {%> invisible <% }else{ %> visible <%} %>">
+            <%=(message);%>
+        
+
+        </div>
+    </div>
+</div>
+
+<% if (data!=null){ %>
+    <%console.log("lol")%>
+<% }%>
+<div class="ui main text container" style="margin-top: 10em; margin-bottom: auto;">
+    
+    <div class="ui">
+        
+        <button onclick="window.location.href='/profile'" class="fluid ui button red" style="font-size: 2em; padding-right: 3px;"><i class="qrcode icon" style="font-size: 1.5em; padding-right:1.7em;"></i>Order From My Table</button>
+        <button onclick="window.location.href = '/menu'"class="fluid ui button red" style="font-size: 2em;margin-top: 1em;"><i style="padding-right:2.5em" class="male icon" style="font-size: 1.5em"></i>Order PickUp</button>
+        <button onclick="window.location.href = '/menu'" class="fluid ui button red" style="font-size: 2em;margin-top: 1em;padding-right: 5rem;"><i style="padding-right:3em" class="list icon" style="font-size: 1.5em"></i>View Menu</button>
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+<button style="" class="open-button" onclick="openForm()"> <span style="font-size:1.5rem;">Chatbot</span>  <i style="padding-left:20px;" class="comment icon"></i></button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/" method="POST" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Chatbot Conversation.." name=""><% if (data) {%><%=data.slice(52)%><%}%></textarea>
+    
+    <div>
+        <input name="msg" id="chat" placeholder="Type message.."></input>
+        <button id="send" type="submit" class="btn"><i class="paper plane icon"></i>
+        </button>
+    </div>
+    
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

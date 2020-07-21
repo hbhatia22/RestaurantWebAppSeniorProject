@@ -1,0 +1,71 @@
+<%- include("partials/header.ejs") %>
+
+
+
+<link rel="stylesheet" type="text/css" href="/stylesheets/kitchen.css">
+<!-- 
+<div id="heading">
+        <h1>Orders:</h1>
+</div> -->
+
+<div class="container">
+            <div class="jumbotron">
+                <h1>Current Orders</h1>
+                <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+                  <% orders.forEach(function(order){%>
+                        
+                        <div id="card" class=" card col-md-3 col-sm-6" style="width: 18rem;">
+                                
+                            
+
+                                <div  class="card-body">
+                                  <h5 class="card-title">Customer: <%=order.customer.firstname%></h5>
+                                
+                                 <% order.items.forEach(function(item){ %>
+                                 <% });%> 
+                                 
+                                <% var usaTime = order.time.toLocaleString("en-US", {timeZone: "America/New_York"});%>
+                                <% usaTime = new Date(usaTime); %>
+                                  <p class="card-text"><%=usaTime.toLocaleString() %> </p>
+                                  <a href="/kitchen/<%=order._id%>" class="btn btn-primary">More Info</a>
+                                  <a id="ready" class="btn btn-success">Order Ready</a>
+                                  <!-- <a href="/kitchen/:id" 
+                                      target="popup" 
+                                      onclick="window.open('/kitchen/<%=order.id%>','popup','width=600,height=600'); return false;">
+                                        Open Link in Popup
+                                  </a> -->
+                                </div>
+                              </div> 
+                             
+
+                    <% });%>
+                              
+                   
+                              
+
+                           
+
+                              
+                    
+                    
+            
+                 
+    
+            </div>
+            </div>
+       
+
+</div>
+
+
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.0.js"
+  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  crossorigin="anonymous"></script>
+<script type='text/javascript' src="/javascripts/kitchen.js"></script>
+
+<%- include("partials/footer.ejs") %>

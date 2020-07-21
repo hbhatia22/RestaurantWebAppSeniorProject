@@ -1,0 +1,148 @@
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/manager.css">
+
+<h1>Manager's Dashboard</h1>
+<h2>Menu Management</h2>
+
+        
+<div class="container" id="wrapper">
+  <div class="row">
+    <div class="col-4">
+      <h4>Category and Product Addition</h4>
+      <form action="/manager/add-cat" method="POST" enctype="multipart/form-data">
+            <div class="ui form">
+              <div class="one field">
+                <div class="field error">
+                  <input type="text" name="categoryName" placeholder="Category Name" required="yes">
+                </div>
+
+                <div class="field error">
+                  <div class="input-group mb-3">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="categoryImage" enctype="multipart/form-data" required="yes">
+                      <label class="custom-file-label" for="inputGroupFile01">Category Image</label>
+                    </div>
+                  </div>
+                </div>
+
+                                        
+                <div class="field error">
+                  <button id="add-button" class="ui right labeled icon button green">
+                      <i class="right arrow icon"></i>
+                      Add Category
+                  </button>
+                </div>
+                                      
+              </div>
+            </div>
+      </form>
+      <div id="seperator" class="ui divider"></div>
+            </div>
+            <div class="col-8">
+                    <h4>Menu View</h4>
+                    <iframe src="/menu"></iframe>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4">
+                    <form action="/manager" method="POST" enctype="multipart/form-data">
+                        <div class="ui form">
+                                <div class="one field">
+                                  <div class="field error">
+                                    <input type="text" name="productName" placeholder="Product Name" required="yes">
+                                  </div>
+                                  <div class="field error">
+                                    
+                                    <textarea type="text" name="productDescription" placeholder="Product Description" required="yes">
+                                    
+                                        </textarea>
+                           
+                                  </div>
+                                  <div class="field error">
+                                        <input type="text" name="productPrice" placeholder="Product Price" required="yes">   
+
+                                  </div>
+                                  <div class="field error">
+                                        <div class="input-group mb-3">
+                                               
+                                                <div class="custom-file">
+                                                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="productImage" enctype="multipart/form-data">
+                                                  <label class="custom-file-label" for="inputGroupFile01">Product Image</label>
+                                                </div>
+                                              </div>
+
+                                  </div>
+                                </div>
+                                <div class="field error">
+                                        <input list="Categories" name="catName" placeholder="Select Category" required="yes">
+
+                                        <datalist id="Categories">
+                                            
+                                            <% category.forEach(function(category){%>
+                                              <option value= <%= category.name %> </option>
+                                            
+                                            <%}); %>
+                                        </datalist>
+                                 
+                                </div>
+                                
+                                <button id="add-button" class="ui right labeled icon button green">
+                                        <i class="right arrow icon"></i>
+                                        Add Product
+                                      </button>
+                             
+                                
+                              </div>
+                       
+                       
+                       
+                       
+                       
+                       
+                        <!-- <input class="mb-3 form-control" type="text" name="productName" placeholder="Product Name" required="yes">
+                        <input class="mb-3 form-control" type="text" name="productDescription" placeholder="Product Description" required="yes">
+                        <input class="mb-3 form-control" type="number" name="productPrice" placeholder="Product Price" required="yes">
+                        <input class="mb-3 form-control" type="file" name="productImage" enctype="multipart/form-data" required="yes">
+                        <input class="mb-3 form-control" list="Categories" name="catName">
+
+                            <datalist id="Categories">
+                                <% category.forEach(function(category){%>
+                                    <option value= <%=category.name %> </option>
+                                  
+                                <%}); %>
+                            </datalist>
+
+                        <button class="ui right labeled icon button">
+                                <i class="right arrow icon"></i>
+                                Add Product
+                              </button> -->
+                    
+                            
+                    </form>
+            </div>
+        </div>
+
+</div>
+
+
+
+
+
+
+    
+
+
+    <!-- </div>
+   
+
+</div> -->
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>

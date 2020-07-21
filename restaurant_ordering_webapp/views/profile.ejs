@@ -1,0 +1,58 @@
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/profile.css">
+
+
+</style>
+
+
+    <div id="customer">
+        
+          
+          <h1 class="display-4"> <h1>Welcome back <%=currentUser.firstname%> !</h1></h1>
+          <p class="lead"></p>
+        </div>
+      </div>
+
+
+      <div class="ui main text container" style="margin-top: 6em; margin-bottom: auto;">
+    
+                <button class="fluid ui button green" style="font-size: 2em">Order From Your Table
+                  <form action="/menu" method="POST">
+                    <div>
+                    <input class="" id="table-entry" list="Tables" name="tableNum" placeholder="Select Table">
+
+                                        <datalist id="Tables">
+                                             
+                                           
+                                                <option value=1 >  </option>
+                                                <option value=2 >  </option>
+                                                <option value=3 >  </option>
+                                                <option value=4 >  </option>
+                                                <option value=5 >  </option>
+                                              
+                                         
+                                        </datalist>
+                   
+                  </div>
+                  <div style="margin:0;">
+                    <input style="margin-top:1rem;width:50%" id="input" class="ui button red" type="submit" value="Go to Menu">
+
+                  </div>
+
+                  </form>
+                
+                
+                </button>
+                <button onclick="window.location.href= '/menu'" class="fluid ui button green" style="font-size: 2em;margin-top: 1em;"><i style="padding-right:2em" class="male icon" style="font-size: 1.5em"></i>Order PickUp</button>
+               
+            
+            </div>
+        </div>
+
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
+

@@ -1,0 +1,71 @@
+<%- include("partials/header.ejs") %>
+<link rel="stylesheet" type="text/css" href="/stylesheets/menu.css">
+
+<% if (table[0]!=null && currentUser!=null){  %>
+
+  <h1 id="table-num">You are ordering from table: <%=table[0].number%></h1>
+  
+<% }%>  
+  <% category.forEach(function(category){%>
+  
+    <div class="row">
+      <div class= col-12>
+    <div id="category-item" class= "ui fluid items">
+    <div class="item">
+        <div class="ui small image">
+            <img src =<%=category.categoryImage %>>
+        </div>
+        <div class="middle aligned content">
+            <div class="header">
+                <%= category.name %>
+            </div>
+            <div class="description">
+            <p></p>
+            </div>
+            
+              </div>
+            </div>
+                 
+                
+               
+          </div>   
+    </div>
+  
+  </div>
+    <div id="seperator" class="ui divider"></div>
+    <% category.categoryProducts.forEach(function(product){%> 
+        
+        <div id="product-item" class= "ui items">
+                <div id="product-item" class="item">
+                        <div class="ui small image">
+                          <img src =<%=product.productImage%>>
+                        </div>
+                        <div class="middle aligned content">
+                          <div id="header" class="header">
+                                <%= product.name %>
+                          </div>
+                          <div class="description">
+                            <p><%=product.productDescription%></p>
+                          </div>
+                          <div class="extra ">
+                              Price: $ <%=product.productPrice%>
+                              <button onclick="window.location.href='/add-to-cart/<%=product.id %>'" class="ui button green right floated ">
+                                    <i class="cart plus icon"></i> Add to cart
+                              </button>
+                          </div>
+                          <div class="extra">
+                            
+                          </div>
+                        </div>
+                             
+                              
+                           
+            
+                </div>
+                <div id="seperator" class="ui divider"></div>
+    <%}); %>
+<%}); %>
+
+
+
+<%- include("partials/footer.ejs") %>
